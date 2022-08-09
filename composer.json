@@ -56,6 +56,39 @@
             "dev-master": "1.0-dev"
         }
     },
+    "scripts": {
+        "start": "printf '\\n!\\n!\\t\\033[0;36m%s\\033[0m\\n!\\n\\n' \"Started Build\"",
+        "finish": "printf '\\n!\\n!\\t\\033[0;32m%s\\033[0m\\n!\\n\\n' \"Finished Build\"",
+        "separate": "printf '\\n!\\n!\\t\\033[0;33m%s\\033[0m\\n!\\n\\n' \"---------------------\"",
+        "php-cs-fixer": "vendor/bin/php-cs-fixer fix --verbose --config=.php-cs-fixer.dist.php --diff --dry-run --allow-risky=yes --show-progress=none",
+        "phpstan": "vendor/bin/phpstan analyze --verbose --configuration=phpstan.neon.dist",
+        "phpunit": "vendor/bin/phpunit --verbose --configuration=phpunit.xml.dist",
+        "phpbench": "vendor/bin/phpbench run --verbose --config=phpbench.json.dist --report=overview",
+        "doctum": "php vendor/bin/doctum.php update .doctum.dist.php --verbose --force --no-progress || printf '\\n%s' ''",
+        "fix": "@php-cs-fixer",
+        "analyze": "@phpstan",
+        "test": "@phpunit",
+        "bench": "@phpbench",
+        "document": "@doctum",
+        "build": [
+            "@start",
+            "@fix",
+            "@separate",
+            "@analyze",
+            "@separate",
+            "@test",
+            "@separate",
+            "@bench",
+            "@separate",
+            "@document",
+            "@finish"
+        ],
+        "build-quite": [
+            "@start",
+            "composer run-script build --quiet",
+            "@finish"
+        ]
+    },
     "config": {
         "optimize-autoloader": true,
         "sort-packages": false,
