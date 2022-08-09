@@ -21,10 +21,12 @@ $config = (new Config())
     ->setIndent('    ')
     ->setLineEnding("\n")
     ->setFormat('txt')
-    ->setCacheFile(__DIR__ . '/build/php-cs-fixer/.php-cs-fixer.cache')
+    ->setCacheFile($cache = __DIR__ . '/build/php-cs-fixer/.php-cs-fixer.cache')
     ->setUsingCache(true)
     ->setHideProgress(false)
     ->setRiskyAllowed(true);
+
+!realpath(dirname($cache)) && mkdir(dirname($cache), 0777, true);
 
 return $config;
 
