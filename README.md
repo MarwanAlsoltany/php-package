@@ -224,10 +224,10 @@ Copyright (c) %[year]% %[authorName]%. All rights reserved.
 [maintenance-icon]: https://img.shields.io/badge/maintained-yes-orange.svg?style=flat&logo=github
 [documentation-icon]: https://img.shields.io/website-up-down-blue-red/http/%[author]%.github.io/%[package]%.svg
 <!-- GitHub Actions native badges -->
-<!-- [github-ci-icon]: https://github.com/%[author]%/%[package]%/actions/workflows/ci.yml/badge.svg -->
-<!-- [github-cd-icon]: https://github.com/%[author]%/%[package]%/actions/workflows/cd.yml/badge.svg -->
-[github-ci-icon]: https://img.shields.io/github/workflow/status/%[author]%/%[package]%/CI?style=flat&logo=github
-[github-cd-icon]: https://img.shields.io/github/workflow/status/%[author]%/%[package]%/CD?style=flat&logo=github
+[github-ci-icon]: https://github.com/%[author]%/%[package]%/actions/workflows/ci.yml/badge.svg
+[github-cd-icon]: https://github.com/%[author]%/%[package]%/actions/workflows/cd.yml/badge.svg
+<!-- [github-ci-icon]: https://img.shields.io/github/workflow/status/%[author]%/%[package]%/CI?style=flat&logo=github -->
+<!-- [github-cd-icon]: https://img.shields.io/github/workflow/status/%[author]%/%[package]%/CD?style=flat&logo=github -->
 [codecov-icon]: https://codecov.io/gh/%[author]%/%[package]%/branch/master/graph/badge.svg?token=CODECOV_TOKEN
 <!-- [codacy-coverage-icon]: https://app.codacy.com/project/badge/Coverage/YOUR_CODACY_PROJECT_TOKEN -->
 <!-- [codacy-grade-icon]: https://app.codacy.com/project/badge/Grade/YOUR_CODACY_PROJECT_TOKEN -->
