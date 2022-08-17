@@ -27,7 +27,7 @@ jobs:
         strategy:
             matrix:
                 php-version:
-                    - 8.1
+                    - 8.0
 
         outputs:
             cache-dir: ${{ steps.config.outputs.cache-dir }}
@@ -68,7 +68,7 @@ jobs:
         strategy:
             matrix:
                 php-version:
-                    - 8.1
+                    - 8.0
 
         steps:
             -
@@ -112,7 +112,7 @@ jobs:
         strategy:
             matrix:
                 php-version:
-                    - 8.1
+                    - 8.0
 
         steps:
             -
@@ -161,12 +161,12 @@ jobs:
                     - ubuntu-latest
                     - windows-latest
                 php-version:
-                    - 8.1
+                    - 8.0
                 allow-failures: [false]
                 include:
                     -
                         operating-system: macos-latest
-                        php-version: 8.1
+                        php-version: 8.0
                         allow-failures: true
                         coverage: xdebug
 
@@ -245,7 +245,7 @@ jobs:
                     - ubuntu-latest
                     - windows-latest
                 php-version:
-                    - 8.1
+                    - 8.0
 
         steps:
             -
