@@ -24,7 +24,7 @@ jobs:
         strategy:
             matrix:
                 php-version:
-                    - 8.1
+                    - 8.0
 
         outputs:
             cache-dir: ${{ steps.config.outputs.cache-dir }}
@@ -65,7 +65,7 @@ jobs:
         strategy:
             matrix:
                 php-version:
-                    - 8.1
+                    - 8.0
 
         permissions:
             contents: write
